@@ -3,162 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>保險業短影音獲客與變現全手冊</title>
+    <title>保險業短影音變現全攻略 - 陳總監專屬</title>
     <style>
+        :root {
+            --primary-color: #d4af37; /* 金色，象徵保險專業與高端 */
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f1f5f9;
+            --accent-color: #38bdf8;
+        }
+
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang TC', '微軟正黑體', sans-serif;
-            background-color: #f0f4f8;
-            color: #333333;
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
+            margin: 0;
             padding: 20px;
-            margin: 0;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            background: var(--card-bg);
+            border-radius: 20px;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: #ffffff;
-            padding: 40px 30px;
+
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 40px;
             text-align: center;
+            border-bottom: 3px solid var(--primary-color);
         }
-        .header h1 {
+
+        h1 {
+            color: var(--primary-color);
             margin: 0;
-            font-size: 32px;
+            font-size: 2.2em;
             letter-spacing: 2px;
         }
-        .content {
-            padding: 40px;
-        }
+
         .intro {
-            font-size: 17px;
-            background-color: #e9f0f8;
-            padding: 20px;
-            border-left: 6px solid #2a5298;
-            border-radius: 4px;
-            margin-bottom: 35px;
+            padding: 30px 40px;
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 5px solid var(--primary-color);
+            margin: 20px 40px;
+            font-size: 1.1em;
         }
-        h2 {
-            color: #1e3c72;
-            border-bottom: 2px solid #e9f0f8;
-            padding-bottom: 12px;
-            margin-top: 40px;
-            font-size: 24px;
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            padding: 10px 40px;
+            color: var(--accent-color);
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .section-title::before {
+            content: "◆";
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .content-box {
+            padding: 0 40px 40px 40px;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .step-header {
+            font-size: 1.25em;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
         }
-        h2::before {
-            content: '📌';
-            margin-right: 10px;
+
+        .step-number {
+            background: var(--primary-color);
+            color: #000;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            font-size: 0.8em;
         }
-        .step {
-            margin-bottom: 30px;
-            padding-left: 15px;
-        }
-        .step h3 {
-            color: #2c3e50;
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
+
         ul {
             list-style-type: none;
             padding-left: 0;
         }
+
         li {
             margin-bottom: 12px;
             position: relative;
-            padding-left: 24px;
+            padding-left: 25px;
         }
+
         li::before {
-            content: '✓';
-            color: #2a5298;
-            font-weight: bold;
+            content: "✓";
             position: absolute;
             left: 0;
-            top: 0;
+            color: var(--accent-color);
+            font-weight: bold;
         }
-        strong {
-            color: #d35400;
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
         }
-        .citation {
-            color: #7f8c8d;
-            font-size: 0.9em;
-            vertical-align: super;
+
+        .note-section {
+            background: #2d3748;
+            border-radius: 0 0 20px 20px;
+            padding: 30px 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
-        .important-note {
-            background-color: #fff9e6;
-            padding: 25px;
-            border: 1px solid #ffe082;
+
+        .note-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(244, 63, 94, 0.1);
             border-radius: 8px;
-            margin-top: 20px;
+            border-left: 4px solid #f43f5e;
         }
-        .important-note li::before {
-            content: '⚠️';
-            color: #e67e22;
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #64748b;
+        }
+
+        strong {
+            color: #fff;
+            border-bottom: 1px solid var(--accent-color);
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">
-        <h1>保險業短影音獲客與變現全手冊</h1>
+    <header>
+        <h1>保險業短影音變現全攻略</h1>
+        <p style="margin-top:15px; opacity: 0.8;">針對高客單價服務，建立信任為核心目標</p>
+    </header>
+
+    <div class="intro">
+        針對您從事保險業，這在短影音變現中屬於「高客單價」的服務，因此您的核心目標不是直接在線上賣產品，而是透過影片「建立信任」並引導至私域進行深入溝通。
     </div>
-    <div class="content">
-        
-        <div class="intro">
-            針對您從事保險業，這在短影音變現中屬於「<strong>高客單價</strong>」的服務，因此您的核心目標不是直接在線上賣產品，而是透過影片「<strong>建立信任</strong>」並引導至私域進行深入溝通<span class="citation">[1]</span>。<br><br>
-            以下是為您整理的保險業整套短影音變現流程與注意事項：
+
+    <div class="section-title">整套變現操作流程</div>
+    
+    <div class="content-box">
+        <div class="step-card">
+            <div class="step-header"><span class="step-number">1</span>確立變現路徑與定位</div>
+            <p>在開始拍影片前，先不要急著學拍攝或剪輯，必須先想清楚三件事：<strong>你賣什麼？賣給誰？透過什麼方式賣？</strong></p>
+            <p>保險業的標準變現路徑為：<br>
+            <span class="highlight">透過 IG/短影音建立信任 ➔ 引導至獨立網站、私信或 WhatsApp ➔ 進行線下（或一對一）售前溝通 ➔ 最終完成成交。</span></p>
         </div>
 
-        <h2>整套變現操作流程</h2>
-
-        <div class="step">
-            <h3>1. 確立變現路徑與定位</h3>
-            <p>在開始拍影片前，先不要急著學拍攝或剪輯，必須先想清楚三件事：你賣什麼？賣給誰？透過什麼方式賣？<span class="citation">[1]</span>。 保險業的標準變現路徑為：<strong>透過 IG/短影音建立信任 ➔ 引導至獨立網站、私信或 WhatsApp ➔ 進行線下（或一對一）售前溝通 ➔ 最終完成成交</strong><span class="citation">[1]</span>。</p>
-        </div>
-
-        <div class="step">
-            <h3>2. 尋找對標帳號與選題策劃</h3>
-            <p>不要自己憑空想像要拍什麼，也不需要一開始就購買複雜設備或招募團隊<span class="citation">[1]</span>。</p>
+        <div class="step-card">
+            <div class="step-header"><span class="step-number">2</span>尋找對標帳號與選題策劃</div>
+            <p>不要自己憑空想像要拍什麼，也不需要一開始就購買複雜設備或招募團隊。</p>
             <ul>
-                <li><strong>找對標</strong>：去 IG 搜尋保險業關鍵詞，或利用 Meta 廣告庫看同行的廣告內容，也可以跨平台到 TikTok 反查相關帳號<span class="citation">[1]</span>。</li>
-                <li><strong>挑選標準</strong>：尋找粉絲數在 <strong>1萬到 10萬</strong> 之間、數據穩定的「中腰部帳號」，不要找百萬粉絲的大帳號<span class="citation">[1]</span>。觀察的核心不是看點讚數，而是看「評論互動質量」好的影片<span class="citation">[1]</span>。</li>
-                <li><strong>模仿模板</strong>：不要一字不差地照抄腳本，而是去拆解並模仿他們的<strong>前 3 秒開頭鉤子</strong>、<strong>影片結構</strong>以及<strong>拍攝場景</strong>，將這三樣東西整理成模板來進行拍攝<span class="citation">[1]</span>。</li>
-                <li><strong>內容形式</strong>：可以圍繞四種形式來切入：教知識、曬過程、講故事、說觀點<span class="citation">[1]</span>。</li>
+                <li><strong>找對標：</strong>去 IG 搜尋保險業關鍵詞，或利用 Meta 廣告庫看同行的廣告內容，也可以跨平台到 TikTok 反查相關帳號。</li>
+                <li><strong>挑選標準：</strong>尋找粉絲數在 <strong>1萬到 10萬</strong> 之間、數據穩定的「中腰部帳號」，不要找百萬粉絲的大帳號。觀察的核心不是看點讚數，而是看「評論互動質量」好的影片。</li>
+                <li><strong>模仿模板：</strong>不要一字不差地照抄腳本，而是去拆解並模仿他們的前 3 秒開頭鉤子、影片結構以及拍攝場景，將這三樣東西整理成模板來進行拍攝。</li>
+                <li><strong>內容形式：</strong>可以圍繞四種形式來切入：教知識、曬過程、講故事、說觀點。</li>
             </ul>
         </div>
 
-        <div class="step">
-            <h3>3. 突破流量池與打上系統標籤</h3>
-            <p>新帳號最常遇到的問題是播放量卡在 500 且漲粉慢，這通常是因為系統還沒為你的帳號「打上標籤」，不知道該推流給誰<span class="citation">[2]</span>。</p>
+        <div class="step-card">
+            <div class="step-header"><span class="step-number">3</span>突破流量池與打上系統標籤</div>
+            <p>新帳號最常遇到的問題是播放量卡在 500 且漲粉慢，這通常是因為系統還沒為你的帳號「打上標籤」，不知道該推流給誰。</p>
             <ul>
-                <li><strong>解法</strong>：持續發布 <strong>10 條垂直內容</strong>（例如只專注講保險相關的知識或故事）<span class="citation">[2]</span>。</li>
-                <li><strong>投流加速</strong>：從中挑選 3 條「<strong>完播率最高</strong>」的影片，總共花費 50 美金進行投放，藉此撬動系統的推薦流量，快速為帳號打上精準標籤<span class="citation">[2]</span>。</li>
+                <li><strong>解法：</strong>持續發布 10 條垂直內容（例如只專注講保險相關的知識或故事）。</li>
+                <li><strong>投流加速：</strong>從中挑選 3 條「完播率最高」的影片，總共花費 50 美金進行投放，藉此撬動系統的推薦流量，快速為帳號打上精準標籤。</li>
             </ul>
         </div>
 
-        <div class="step">
-            <h3>4. 跑通私域轉化系統</h3>
-            <p>當有了定位並打上標籤後，只要穩定執行「短影音 ➔ 私信/WhatsApp/Facebook/獨立站 ➔ 成交」的流程，一旦產出一到兩條小爆款影片，帶來的獲客量對一般業務來說就已經非常充足<span class="citation">[2]</span>。</p>
+        <div class="step-card" style="margin-bottom:0;">
+            <div class="step-header"><span class="step-number">4</span>跑通私域轉化系統</div>
+            <p>當有了定位並打上標籤後，只要穩定執行<strong>「短影音 ➔ 私信/WhatsApp/Facebook/獨立站 ➔ 成交」</strong>的流程，一旦產出一到兩條小爆款影片，帶來的獲客量對一般業務來說就已經非常充足。</p>
         </div>
+    </div>
 
-        <h2>操作注意事項</h2>
-        <div class="important-note">
-            <ul>
-                <li><strong>不要做流量，要做生意</strong>：做短影音的目的是為了獲客變現，而不是為了當網紅<span class="citation">[2]</span>。很多帳號只盯著「播放量」和「漲粉」，但這對保險業來說不是最重要的，能賺到錢（精準獲客）才是最終目的<span class="citation">[2]</span>。</li>
-                <li><strong>避免無效努力</strong>：如果沒有明確的變現路徑就盲目發影片，很容易淪為「白做」<span class="citation">[2]</span>。</li>
-                <li><strong>隨時檢查標籤是否精準</strong>：可以打開 IG 的專業儀表板（洞察報告），查看受眾的國家與興趣分布。如果數據很糟，就說明標籤沒打上，必須透過上述的「垂直內容+投流」策略來修正<span class="citation">[2]</span>。</li>
-            </ul>
+    <div class="section-title">操作注意事項</div>
+    <div class="note-section">
+        <div class="note-item">
+            <strong>不要做流量，要做生意：</strong>做短影音的目的是為了獲客變現，而不是為了當網紅。很多帳號只盯著「播放量」和「漲粉」，但這對保險業來說不是最重要的，能賺到錢（精準獲客）才是最終目的。
         </div>
-
+        <div class="note-item">
+            <strong>避免無效努力：</strong>如果沒有明確的變現路徑就盲目發影片，很容易淪為「白做」。
+        </div>
+        <div class="note-item" style="margin-bottom:0; border-left-color: var(--accent-color); background: rgba(56, 189, 248, 0.1);">
+            <strong>隨時檢查標籤是否精準：</strong>可以打開 IG 的專業儀表板（洞察報告），查看受眾的國家與興趣分布。如果數據很糟，就說明標籤沒打上，必須透過上述的「垂直內容+投流」策略來修正。
+        </div>
     </div>
 </div>
+
+<footer>
+    © 2026 保險業短影音數位轉型藍圖 - 專業領航
+</footer>
 
 </body>
 </html>
